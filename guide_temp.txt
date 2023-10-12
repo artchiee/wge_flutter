@@ -1,0 +1,22 @@
+=> What's been done  : 
+    - dates have been add by @rge but they still squiched together => --: 
+    => changed dates format to MMMd => similar output to old chart ( Sep20)
+
+
+-----------------------------------
+=>  What's left to make final Pr : 
+    >>  (@rge add what's left to be done for issue) . ::: 
+
+    -----------------------------------------------------------
+
+        y-axis (leftTitles) => might still be broken  ;(interval not applied or not correct)
+        x-axis (bottomTitles) 
+
+        - dates appears to be spacing  using "MMMd" format (still overlapping) .
+        - dates : {
+            => when entries from same month entered (remove MMM) only (d) is shown , 
+                till new month entered . 
+        }
+
+        - (left titles) are squiched when more entries are been enterd . (check @rge -> todo(issue) built)
+        - might do a bit of animation and coloring to make chart look eye appealing ::--

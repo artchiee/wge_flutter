@@ -51,3 +51,6 @@ app.*.map.json
 # Others
 /vendor/bundle/ruby/
 /coverage/
+
+#tt guide (delete later )
+##guide_temp.txt

@@ -32,7 +32,8 @@ class MeasurementChartWidgetFl extends StatefulWidget {
 }
 
 class _MeasurementChartWidgetFlState extends State<MeasurementChartWidgetFl> {
-  final interval = 15 * Duration.millisecondsPerDay / 1000 / 60;
+  // #FIXME : might be problem with interval still causes (titles) to be squiched
+  final interval = 15 * Duration.millisecondsPerDay / 1000 / 60; // =  21600.0
 
   @override
   Widget build(BuildContext context) {
@@ -84,11 +85,16 @@ class _MeasurementChartWidgetFlState extends State<MeasurementChartWidgetFl> {
           sideTitles: SideTitles(
             showTitles: true,
             getTitlesWidget: (value, meta) {
+              //TODO : [https://duckduckgo.com/?q=flutter+chart++show+month+if+previous+month+is+not+same&t=operav&ia=web]
+              // track for month change to only show (d) if prev(month is same)
               final DateTime date = DateTime.fromMillisecondsSinceEpoch(value.toInt() * 1000 * 60);
+
               return Text(
-                DateFormat.yMd(Localizations.localeOf(context).languageCode).format(date),
+                DateFormat.MMMd(Localizations.localeOf(context).languageCode).format(date),
               );
             },
+
+            //
             interval: interval,
           ),
         ),
